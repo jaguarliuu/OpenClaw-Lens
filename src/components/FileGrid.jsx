@@ -3,8 +3,11 @@ import React from 'react'
 export default function FileGrid({ files, onFileClick }) {
   if (!files || files.length === 0) {
     return (
-      <div className="text-center py-16 text-gray-400">
-        No files found
+      <div className="text-center py-16">
+        <p className="text-gray-400 mb-2">No files yet</p>
+        <p className="text-xs text-gray-400">
+          Add files using preview-sync skill or manually to public/agents/{'{agent}'}/
+        </p>
       </div>
     )
   }
