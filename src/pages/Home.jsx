@@ -3,9 +3,7 @@ import { useGitHubApi } from '../hooks/useGitHubApi'
 import Sidebar from '../components/Sidebar'
 import FileGrid from '../components/FileGrid'
 import PreviewModal from '../components/PreviewModal'
-
-const GITHUB_OWNER = 'your-github-username'
-const GITHUB_REPO = 'your-repo-name'
+import { GITHUB_OWNER, GITHUB_REPO } from '../config/github'
 
 export default function Home() {
   const { agents, files, loading, error, getAgents, getFiles, getFileContent } = useGitHubApi(GITHUB_OWNER, GITHUB_REPO)
