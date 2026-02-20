@@ -14,34 +14,52 @@
 
 ## 🚀 快速开始
 
-### 步骤 1：创建你的仓库
+### 方式 1：GitHub Template（推荐）
 
-1. 访问 **[OpenClaw-Lens 模板](https://github.com/jaguarliuu/OpenClaw-Lens)**
+**如果已启用 Template：**
+
+1. 访问 **[OpenClaw-Lens](https://github.com/jaguarliuu/OpenClaw-Lens)**
 2. 点击 **"Use this template"** → **"Create a new repository"**
 3. 输入仓库名称（如：`my-openclaw-lens`）
 4. 点击 **"Create repository"**
-
-### 步骤 2：运行安装脚本
+5. 运行安装脚本：
 
 ```bash
-# 下载并运行安装脚本
 curl -fsSL https://raw.githubusercontent.com/jaguarliuu/OpenClaw-Lens/main/install.sh | bash
 ```
 
-脚本会询问：
-- GitHub 用户名
-- 仓库名称
-- Agent 名称
+### 方式 2：Fork + 脚本
 
-### 步骤 3：启用 GitHub Pages
+**如果未启用 Template：**
 
-1. 进入你的仓库 **Settings** → **Pages**
-2. **Source** 选择 **"GitHub Actions"**
-3. 等待自动部署（1-2 分钟）
+```bash
+# 1. Fork 仓库
+# 访问 https://github.com/jaguarliuu/OpenClaw-Lens
+# 点击 "Fork" 创建你自己的仓库
 
-### 步骤 4：访问预览站点
+# 2. 运行安装脚本
+curl -fsSL https://raw.githubusercontent.com/jaguarliuu/OpenClaw-Lens/main/install.sh | bash
+```
 
-访问：`https://你的用户名.github.io/仓库名/`
+安装脚本会引导你完成配置。
+
+### 方式 3：手动 Clone
+
+```bash
+# Clone 你的仓库
+git clone https://github.com/你的用户名/你的仓库名.git
+cd 你的仓库名
+
+# 安装依赖
+npm install
+
+# 创建本地配置
+cp .env.example .env.local
+# 编辑 .env.local 填写你的信息
+
+# 本地开发
+npm run dev
+```
 
 ## 📖 使用方法
 
